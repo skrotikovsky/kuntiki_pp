@@ -88,7 +88,7 @@ function Customize(): JSX.Element {
                     </div>
                     <div className="params-item">
                         <img src="/img/local_shipping.svg" alt="#"/>
-                        <span>{store.Weight() >= 150?'Вагонетка':'Воздушный шар'}</span>
+                        <span>{store.Weight() >= 150 && (store.customSize==='XXL'||store.customSize==='XXXL')?'Вагонетка':'Воздушный шар'}</span>
                     </div>
                 </div>
             </div>

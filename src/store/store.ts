@@ -129,7 +129,7 @@ class Store {
         this.openedFilter = newFilter;
     }
     public getProducts(): void {
-        fetch("http://localhost:4000/kuntiks").then(response => response.json())
+        fetch("https://server-personal-page-2.onrender.com/kuntiks").then(response => response.json())
             .then((res: Product[]) =>{
                 runInAction(()=> {
                     this.products = res
@@ -137,7 +137,7 @@ class Store {
             });
     }
     public getPrices(): void {
-        fetch("http://localhost:4000/price-list").then(response => response.json())
+        fetch("https://server-personal-page-2.onrender.com/prices").then(response => response.json())
             .then((res: ParamList) =>{
                 runInAction(()=> {
                     this.priceList = res
@@ -145,7 +145,7 @@ class Store {
             });
     }
     public getQuality(): void {
-        fetch("http://localhost:4000/quality").then(response => response.json())
+        fetch("https://server-personal-page-2.onrender.com/quality").then(response => response.json())
             .then((res: ParamList) =>{
                 runInAction(()=> {
                     this.quality = res
@@ -153,7 +153,7 @@ class Store {
             });
     }
     public getWeight(): void {
-        fetch("http://localhost:4000/weight").then(response => response.json())
+        fetch("https://server-personal-page-2.onrender.com/weights").then(response => response.json())
             .then((res: ParamList) =>{
                 runInAction(()=> {
                     this.weight = res
